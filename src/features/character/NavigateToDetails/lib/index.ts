@@ -1,0 +1,1 @@
+export { generateCharacterDetailsUrlPath } from './generateCharacterDetailsUrlPath'

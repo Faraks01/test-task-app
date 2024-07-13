@@ -1,0 +1,1 @@
+export { mapCharacter } from './mapCharacter';
