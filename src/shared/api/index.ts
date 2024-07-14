@@ -1,1 +1,1 @@
-export { apiInstance } from './client'
+export { apiInstance } from './client';

@@ -1,14 +1,14 @@
-import type {ChangeEvent, FC} from 'react'
-import {EditCharacterFormProps} from './EditCharacterForm.types'
-import {Button, FormControl, Stack, TextField} from "@mui/material";
-import {useEditCharacterForm} from "@/features/character/EditCharacter/model";
-import {Form} from "@/shared/ui";
+import type { ChangeEvent, FC } from 'react';
+import { EditCharacterFormProps } from './EditCharacterForm.types';
+import { Button, FormControl, Stack, TextField } from '@mui/material';
+import { useEditCharacterForm } from '@/features/character/EditCharacter/model';
+import { Form } from '@/shared/ui';
 
 const EditCharacterForm: FC<EditCharacterFormProps> = ({
   disabled,
   initialFormData,
   onCancelButtonClick,
-  onFormSubmit
+  onFormSubmit,
 }) => {
   const {
     formData,
@@ -23,23 +23,24 @@ const EditCharacterForm: FC<EditCharacterFormProps> = ({
     resetForm,
   } = useEditCharacterForm(initialFormData);
 
-  const handleTextInputChange = (callback: (value: string) => void) => (event: ChangeEvent<HTMLInputElement>) => {
-    callback(event.target.value);
-  }
+  const handleTextInputChange =
+    (callback: (value: string) => void) => (event: ChangeEvent<HTMLInputElement>) => {
+      callback(event.target.value);
+    };
 
   const handleCancelButtonClick = () => {
     resetForm();
     onCancelButtonClick();
-  }
+  };
 
   const handleFormSubmit = () => {
     onFormSubmit({ ...formData });
-  }
+  };
 
   return (
     <Form onSubmit={handleFormSubmit}>
       <FormControl>
-        <Stack spacing={2} width='100%'>
+        <Stack spacing={2} width="100%">
           <TextField
             disabled={disabled}
             id="name-input"
@@ -49,7 +50,7 @@ const EditCharacterForm: FC<EditCharacterFormProps> = ({
           />
 
           <TextField
-            type='number'
+            type="number"
             disabled={disabled}
             id="height-input"
             label="Height"
@@ -58,7 +59,7 @@ const EditCharacterForm: FC<EditCharacterFormProps> = ({
           />
 
           <TextField
-            type='number'
+            type="number"
             disabled={disabled}
             id="mass-input"
             label="Mass"
@@ -91,7 +92,7 @@ const EditCharacterForm: FC<EditCharacterFormProps> = ({
           />
 
           <TextField
-            type='number'
+            type="number"
             disabled={disabled}
             id="birth-year-input"
             label="Birth Year"
@@ -107,14 +108,18 @@ const EditCharacterForm: FC<EditCharacterFormProps> = ({
             onChange={handleTextInputChange(onGenderInputChange)}
           />
 
-          <Stack direction='row' spacing={2}>
-            <Button variant='contained' color='error' onClick={handleCancelButtonClick}>Cancel</Button>
-            <Button variant='contained' color='success' type='submit'>Submit</Button>
+          <Stack direction="row" spacing={2}>
+            <Button variant="contained" color="error" onClick={handleCancelButtonClick}>
+              Cancel
+            </Button>
+            <Button variant="contained" color="success" type="submit">
+              Submit
+            </Button>
           </Stack>
         </Stack>
       </FormControl>
     </Form>
-  )
-}
+  );
+};
 
-export default EditCharacterForm
+export default EditCharacterForm;

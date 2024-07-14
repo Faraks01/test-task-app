@@ -1,6 +1,6 @@
-import type {CharacterDTO} from '@/entities/character/api'
-import type {Character} from "@/entities/character/model";
-import {parseEntityIdFromUrl} from "@/shared/lib";
+import type { CharacterDTO } from '@/entities/character/api';
+import type { Character } from '@/entities/character/model';
+import { parseEntityIdFromUrl } from '@/shared/lib';
 
 export const mapCharacter = ({
   birth_year,

@@ -1,1 +1,1 @@
-export { Page as CharactersDetailsPage } from './Page'
+export { Page as CharactersDetailsPage } from './Page';

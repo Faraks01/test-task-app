@@ -1,15 +1,11 @@
-import {useEffect, useState} from "react";
-import {useSearch} from "@/shared/lib/useSearch.ts";
+import { useEffect, useState } from 'react';
+import { useSearch } from '@/shared/lib/useSearch.ts';
 
 const INIT_PAGE = 1;
 
 export const useListQueryFilters = () => {
   const [page, setPage] = useState(INIT_PAGE);
-  const {
-    searchString,
-    setSearchString,
-    clearSearchString,
-  } = useSearch();
+  const { searchString, setSearchString, clearSearchString } = useSearch();
 
   useEffect(() => {
     if (searchString && page !== INIT_PAGE) {
@@ -23,5 +19,5 @@ export const useListQueryFilters = () => {
     searchString,
     setSearchString,
     clearSearchString,
-  }
-}
+  };
+};

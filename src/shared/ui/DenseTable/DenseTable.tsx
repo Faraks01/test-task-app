@@ -1,5 +1,5 @@
-import type {FC} from "react";
-import type {DenseTableProps} from "./DenseTable.types.tsx";
+import type { FC } from 'react';
+import type { DenseTableProps } from './DenseTable.types.tsx';
 import Table from '@mui/material/Table';
 import TableBody from '@mui/material/TableBody';
 import TableCell from '@mui/material/TableCell';
@@ -8,11 +8,7 @@ import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 
-const DenseTable: FC<DenseTableProps> = ({
-  ariaLabel,
-  headers,
-  rows
-}) => {
+const DenseTable: FC<DenseTableProps> = ({ ariaLabel, headers, rows }) => {
   return (
     <TableContainer component={Paper}>
       <Table size="small" aria-label={ariaLabel}>
@@ -35,7 +31,7 @@ const DenseTable: FC<DenseTableProps> = ({
           {rows.map((rowValues, index) => (
             <TableRow
               key={`row__${index}`}
-              sx={{'&:last-child td, &:last-child th': {border: 0}}}
+              sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
             >
               {rowValues.map((value, valueIndex) => (
                 <TableCell
@@ -53,6 +49,6 @@ const DenseTable: FC<DenseTableProps> = ({
       </Table>
     </TableContainer>
   );
-}
+};
 
 export default DenseTable;

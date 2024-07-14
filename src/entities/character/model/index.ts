@@ -1,1 +1,1 @@
-export type { Character } from './types'
+export type { Character } from './types';

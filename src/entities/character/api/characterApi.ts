@@ -1,8 +1,8 @@
-import useSWR, {useSWRConfig} from 'swr';
-import { apiInstance } from '@/shared/api'
-import type {CharacterDTO} from "@/entities/character/api";
-import type {Character} from "@/entities/character/model";
-import {mapCharacter} from "@/entities/character/lib";
+import useSWR, { useSWRConfig } from 'swr';
+import { apiInstance } from '@/shared/api';
+import type { CharacterDTO } from '@/entities/character/api';
+import type { Character } from '@/entities/character/model';
+import { mapCharacter } from '@/entities/character/lib';
 
 const CHARACTER_PATH_SEGMENT = '/people';
 
@@ -17,7 +17,7 @@ const characterApi = {
 
       return apiInstance
         .get<CharacterDTO>(url)
-        .then<Character>(({ data }) => mapCharacter(data))
+        .then<Character>(({ data }) => mapCharacter(data));
     });
   },
 
@@ -28,26 +28,33 @@ const characterApi = {
 
     return {
       patch: (payload: Partial<Character>) => {
-        sessionStorage.setItem(key, JSON.stringify(cachedData ? {
-          ...JSON.parse(cachedData),
-          ...payload
-        } : payload));
+        sessionStorage.setItem(
+          key,
+          JSON.stringify(
+            cachedData
+              ? {
+                  ...JSON.parse(cachedData),
+                  ...payload,
+                }
+              : payload,
+          ),
+        );
 
         // tell all SWRs with this key to revalidate
-        return mutate(key)
-      }
-    }
+        return mutate(key);
+      },
+    };
   },
 
   useGetCharactersList: (page: number = 1, search: string = '') => {
-    return useSWR(`${CHARACTER_PATH_SEGMENT}/?page=${page}&search=${search}`, (url: string) => (
-      apiInstance
-        .getList<CharacterDTO[]>(url)
-        .then(({ data }) => ({
+    return useSWR(
+      `${CHARACTER_PATH_SEGMENT}/?page=${page}&search=${search}`,
+      (url: string) =>
+        apiInstance.getList<CharacterDTO[]>(url).then(({ data }) => ({
           ...data,
-          results: data.results.map(mapCharacter)
-        }))
-    ));
+          results: data.results.map(mapCharacter),
+        })),
+    );
   },
 };
 

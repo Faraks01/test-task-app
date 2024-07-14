@@ -1,30 +1,33 @@
-# React + TypeScript + Vite
+# Test task app
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Overview
+React-based web application built with TypeScript and Vite. It utilizes Material-UI for styling and includes various utilities for state management, routing, and date handling.
+This project uses the [Feature-Sliced Design (FSD)](https://feature-sliced.design/docs/get-started/overview) methodology, which is an architectural methodology for frontend projects.
+FSD helps in organizing code in a way that's scalable, maintainable, and encourages separation of concerns.
 
-Currently, two official plugins are available:
+## Node Version
+v20.15.1
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Scripts
+- `dev`: Start the development server using Vite
+- `build`: Compile TypeScript and build the project for production
+- `lint`: Run ESLint to check for code quality and style issues
+- `lint:format`: Format code using Prettier
+- `preview`: Preview the built project locally
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+## Tech Stack
+- React (v18.3.1)
+- React DOM (v18.3.1)
+- React Router DOM (v6.24.1)
+- Material-UI (v5.16.1)
+- Emotion (for styled components)
+- Axios (v1.7.2)
+- date-fns (v3.6.0)
+- SWR (v2.2.5)
+- React Toastify (v10.0.5)
+- Vite (v5.3.1)
+- Jest (v29.7.0)
+- Testing Library (React, DOM, and user-event)
+- MSW (Mock Service Worker) (v2.3.1)
+- ESLint (v8.57.0)
+- Prettier (v3.3.3)

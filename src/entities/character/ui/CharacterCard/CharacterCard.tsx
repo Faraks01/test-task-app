@@ -1,13 +1,13 @@
-import type {FC} from 'react'
-import {CharacterCardProps} from './CharacterCard.types'
-import {DenseTable, MediaCard} from "@/shared/ui";
-import {Stack, Typography} from "@mui/material";
-import {formatDistanceToNow} from 'date-fns'
+import type { FC } from 'react';
+import { CharacterCardProps } from './CharacterCard.types';
+import { DenseTable, MediaCard } from '@/shared/ui';
+import { Stack, Typography } from '@mui/material';
+import { formatDistanceToNow } from 'date-fns';
 
-const CharacterCard: FC<CharacterCardProps> = ({character: c, actions}) => {
+const CharacterCard: FC<CharacterCardProps> = ({ character: c, actions }) => {
   return (
     <MediaCard
-      content={(
+      content={
         <Stack spacing={2}>
           <Typography variant="h5" component="div">
             {c.name}
@@ -36,10 +36,10 @@ const CharacterCard: FC<CharacterCardProps> = ({character: c, actions}) => {
             </Typography>
           </Stack>
         </Stack>
-      )}
+      }
       actions={actions}
     />
-  )
-}
+  );
+};
 
-export default CharacterCard
+export default CharacterCard;

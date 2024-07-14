@@ -1,5 +1,6 @@
-import {DetailedHTMLProps, FormHTMLAttributes, ReactNode} from "react";
+import { DetailedHTMLProps, FormHTMLAttributes, ReactNode } from 'react';
 
-export interface FormProps extends DetailedHTMLProps<FormHTMLAttributes<HTMLFormElement>, HTMLFormElement> {
+export interface FormProps
+  extends DetailedHTMLProps<FormHTMLAttributes<HTMLFormElement>, HTMLFormElement> {
   children: ReactNode;
 }

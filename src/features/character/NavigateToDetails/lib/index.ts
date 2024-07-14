@@ -1,1 +1,1 @@
-export { generateCharacterDetailsUrlPath } from './generateCharacterDetailsUrlPath'
+export { generateCharacterDetailsUrlPath } from './generateCharacterDetailsUrlPath';

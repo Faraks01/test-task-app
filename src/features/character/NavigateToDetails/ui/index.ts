@@ -1,1 +1,1 @@
-export { NavigateToCharacterDetailsButton } from './NavigateToCharacterDetailsButton'
+export { NavigateToCharacterDetailsButton } from './NavigateToCharacterDetailsButton';

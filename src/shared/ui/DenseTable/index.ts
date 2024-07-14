@@ -1,1 +1,1 @@
-export { default as DenseTable } from './DenseTable'
+export { default as DenseTable } from './DenseTable';

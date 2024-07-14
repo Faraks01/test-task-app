@@ -1,1 +1,1 @@
-export { default as CharacterDetailsView } from './CharacterDetailsView'
+export { default as CharacterDetailsView } from './CharacterDetailsView';

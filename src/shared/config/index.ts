@@ -1,2 +1,2 @@
-export { backendBaseUrl, defaultListRequestItemsLimit } from './backend'
-export { ROUTE_CONSTANTS } from './routes'
+export { backendBaseUrl, defaultListRequestItemsLimit } from './backend';
+export { ROUTE_CONSTANTS } from './routes';

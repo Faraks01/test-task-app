@@ -1,1 +1,1 @@
-export { default as NavigateToCharacterDetailsButton } from './NavigateToCharacterDetailsButton'
+export { default as NavigateToCharacterDetailsButton } from './NavigateToCharacterDetailsButton';

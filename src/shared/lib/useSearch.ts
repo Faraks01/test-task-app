@@ -1,7 +1,7 @@
-import {useState} from "react";
+import { useState } from 'react';
 
 export const useSearch = () => {
-  const [search, setSearch] = useState('')
+  const [search, setSearch] = useState('');
 
   const clearSearchString = () => setSearch('');
 
@@ -9,5 +9,5 @@ export const useSearch = () => {
     searchString: search,
     setSearchString: setSearch,
     clearSearchString,
-  }
-}
+  };
+};

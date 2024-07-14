@@ -1,1 +1,1 @@
-export { Page as CharactersFeedPage } from './Page'
+export { Page as CharactersFeedPage } from './Page';

@@ -1,3 +1,1 @@
-export interface CharactersListProps {
-
-}
+export interface CharactersListProps {}
