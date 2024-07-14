@@ -13,7 +13,7 @@ interface TransformedListResponseData<Results extends any[]> extends ListRespons
   pagesCount: number;
 }
 
-class ApiInstance implements Pick<AxiosInstance, 'delete' | 'get' | 'patch' | 'post' | 'put'> {
+class ApiInstance implements Pick<AxiosInstance, 'get'> {
   private axios: AxiosInstance;
 
   constructor() {
